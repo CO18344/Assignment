@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+int n1,n2,n3;
+
+printf("\nEnter three integers:\n");
+scanf("%d%d%d",&n1,&n2,&n3);
+
+if(n1!=n2&&n2!=n3&&n1!=n3)
+    printf("  1");//different inputs
+else if(n1==n2||n2==n3||n1==n3)
+    printf("  0");//two ore more inputs are same
+
+return 0;
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+int M,N;
+printf("Pgm to chech whether an integer is exactt multiple of another");
+printf("\nEnter any two integers:\n");
+scanf("%d%d",&M,&N);
+
+if(M%N==0)
+    printf("%d",M/N);
+else
+    printf("0");
+
+return 0;
+}

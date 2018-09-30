@@ -1,0 +1,9 @@
+
+#include <stdlib.h>
+#include <stdio.h>
+int main ()
+{
+    system("pstree");           /* print pstree(a system call) */
+
+return 0;
+}

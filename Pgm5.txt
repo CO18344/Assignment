@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{char arr[100];
+int count=0;
+int i,t,rev=0,d;
+    printf("\nEnter ipv4 address: ");
+    gets(arr);
+
+    for(i=0;arr[i]!='\0';i++)
+    {
+        if((arr[i]>=48&&arr[i]<=57)||(arr[i]==46))
+        {
+            if(arr[i]==46)
+                ++count;
+        }
+       else
+        {
+            t=1;
+
+        }
+
+
+    }
+    if(t==1||count!=3)
+       {
+        printf("\nNot valid ipv4");
+       exit(0);
+       }
+    char *ptr=arr;
+    for(i=0;i<3;i++)
+    {
+        rev=0;
+
+        for(;*ptr!='.';++ptr)
+    {d=*ptr;
+    d=(d+9)-57;
+        rev=rev*10+d;
+    }
+    ++ptr;
+    if(rev>=0&&rev<=255);
+    else
+    {printf("\nNot valid ipv4");
+        exit(0);
+    }
+    }
+    rev=0;
+    for(;*ptr!='\0';++ptr)
+    {
+        d=*ptr;
+    d=(d+9)-57;
+        rev=rev*10+d;
+    }
+    if(rev>=0&&rev<=255);
+    else
+    {printf("\nNot valid ipv4");
+        exit(0);
+    }
+    printf("\n%s ia valid ipv4 address",arr);
+    return 0;
+
+}
+
